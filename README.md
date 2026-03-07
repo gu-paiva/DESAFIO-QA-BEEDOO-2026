@@ -21,11 +21,9 @@ Este documento apresenta uma análise inicial da aplicação, com o objetivo de 
 
 # 1. Objetivo da Aplicação
 
-A aplicação aparenta ter como objetivo permitir o **gerenciamento de cursos dentro de uma plataforma educacional**, possibilitando que usuários criem, organizem e visualizem conteúdos educacionais.
+A aplicação tem como objetivo permitir o gerenciamento de cursos dentro de uma plataforma educacional, possibilitando que usuários criem, organizem e visualizem conteúdos educacionais.
 
-O sistema permite o **cadastro e a visualização de cursos**, contendo informações relevantes como **nome do curso, descrição, instrutor, datas, número de vagas e tipo de curso**.
-
-Esse tipo de aplicação é comum em plataformas de **educação corporativa ou treinamento**, onde empresas disponibilizam cursos para o desenvolvimento e capacitação de colaboradores.
+O sistema permite o cadastro e a visualização de cursos, contendo informações relevantes como nome do curso, descrição, instrutor, datas, número de vagas e tipo de curso.
 
 ---
 
@@ -46,21 +44,21 @@ Permite ao usuário cadastrar um novo curso informando os seguintes dados:
 - **Número de vagas**
 - **Tipo de curso (presencial ou online)**
 
-Durante esse processo, o sistema deve realizar **validação dos campos informados** e garantir que as informações sejam **armazenadas corretamente**.
+Durante esse processo, o sistema deve realizar validação dos campos informados e garantir que as informações sejam armazenadas corretamente.
 
 ---
 
 ## Listagem de Cursos
 
-Permite visualizar **todos os cursos cadastrados na plataforma**, exibindo as principais informações de cada curso.
+Permite visualizar todos os cursos cadastrados na plataforma, exibindo as principais informações de cada curso.
 
-Esse fluxo é importante para garantir que os cursos cadastrados sejam **corretamente exibidos e acessíveis aos usuários**.
+Esse fluxo é importante para garantir que os cursos cadastrados sejam corretamente exibidos e acessíveis aos usuários.
 
 ---
 
 ## Visualização de Detalhes do Curso
 
-Permite acessar as **informações completas de um curso específico**, apresentando os dados cadastrados anteriormente.
+Permite acessar as informações completas de um curso específico, apresentando os dados cadastrados anteriormente.
 
 ---
 
@@ -70,7 +68,7 @@ Algumas partes da aplicação são mais sensíveis e devem receber maior atenç�
 
 ## Validação de Campos no Cadastro de Curso
 
-É fundamental garantir que o sistema **valide corretamente os campos obrigatórios**, evitando o cadastro de cursos com **dados inválidos ou incompletos**.
+É fundamental garantir que o sistema valide corretamente os campos obrigatórios, evitando o cadastro de cursos com dados inválidos ou incompletos.
 
 Exemplos de validações importantes incluem:
 
@@ -99,7 +97,7 @@ A listagem deve:
 - **Exibir corretamente todos os cursos cadastrados**
 - **Atualizar após novos cadastros**
 - **Não apresentar duplicidades ou falhas de carregamento**
-
+- **Excluir curso**
 ---
 
 ## Cenários Negativos
