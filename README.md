@@ -147,5 +147,5 @@ Durante a execução dos testes foram utilizadas as seguintes ferramentas:
 - **Google Sheets** – criação e documentação dos casos de teste
 - **Google Drive** – armazenamento das evidências dos testes
 - **Google Chrome DevTools** – análise de erros no console e requisições da API
-- **GitHub** – versionamento do projeto e documentação do desafio
+- **GitHub** – documentação do desafio
 - ---
