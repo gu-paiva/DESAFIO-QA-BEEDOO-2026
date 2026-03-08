@@ -136,3 +136,15 @@ As evidências coletadas durante a execução dos testes estão disponíveis no 
 📂 Pasta com evidências:
 
 🔗 **(https://drive.google.com/drive/folders/18ZaAU8HI3qYrWAjgIMAazCNMcapRWbu9?usp=drive_link)**
+
+---
+
+##  Ferramentas Utilizadas
+
+Durante a execução dos testes foram utilizadas as seguintes ferramentas:
+
+- **Google Sheets** – criação e documentação dos casos de teste
+- **Google Drive** – armazenamento das evidências dos testes
+- **Google Chrome DevTools** – análise de erros no console e requisições da API
+- **GitHub** – versionamento do projeto e documentação do desafio
+- ---
