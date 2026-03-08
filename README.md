@@ -1,110 +1,138 @@
-# Teste Técnico - QA
+#  Análise da Aplicação
 
-Este repositório foi desenvolvido como parte de um teste técnico para a posição de Quality Assurance (QA).  
+## Análise Inicial da Aplicação
 
-O objetivo deste documento é apresentar uma análise da aplicação, identificando:
+A aplicação analisada consiste em um sistema web para **cadastro e gerenciamento de cursos**.  
+Por meio da interface, o usuário pode inserir informações sobre cursos e gerenciar esses registros.
 
-- **O objetivo principal do sistema**
-- **Os principais fluxos disponíveis**
-- **Os pontos mais críticos que devem receber maior atenção durante os testes**
+Durante a análise inicial foi possível identificar que a aplicação possui um **formulário de cadastro** com diferentes campos.
 
-A análise foi realizada com base na observação do comportamento da aplicação e dos fluxos disponíveis na interface.
+Também foi possível observar que o sistema realiza requisições para uma API para armazenar e manipular os dados cadastrados.
 
-# DESAFIO-QA-BEEDOO-2026
-
-
-# Análise da Aplicação 
-
-Este documento apresenta uma análise inicial da aplicação, com o objetivo de identificar seu propósito, os principais fluxos disponíveis e os pontos mais críticos que devem receber maior atenção durante os testes.
+Com base nessa análise inicial, foram identificados alguns pontos que poderiam apresentar falhas.
 
 ---
 
-# 1. Objetivo da Aplicação
+##  Decisões Tomadas para Criação dos Testes
 
-A aplicação tem como objetivo permitir o gerenciamento de cursos dentro de uma plataforma educacional, possibilitando que usuários criem, organizem e visualizem conteúdos educacionais.
+Para a criação dos testes foi adotada uma abordagem focada nos principais fluxos da aplicação e nos possíveis cenários de erro que podem ocorrer durante o uso do sistema.
 
-O sistema permite o cadastro e a visualização de cursos, contendo informações relevantes como nome do curso, descrição, instrutor, datas, número de vagas e tipo de curso.
+Entre as decisões tomadas para planejar os testes estão:
 
----
+- Verificar a **validação de campos obrigatórios**, garantindo que o sistema não permita cadastros incompletos.
+- Testar **entradas inválidas**, como inserção de letras em campos numéricos.
+- Avaliar o comportamento do sistema ao inserir **textos muito longos**, verificando possíveis problemas de layout ou ausência de limite de caracteres.
+- Testar **campos preenchidos apenas com espaços**, verificando se o sistema trata corretamente esse tipo de entrada.
+- Avaliar se o sistema permite **cadastro de cursos duplicados**.
+- Verificar se o sistema realiza **validação adequada de URLs**.
+- Testar a funcionalidade de **exclusão de cursos**.
+- Monitorar possíveis **erros de comunicação com a API** através do console do navegador.
 
-# 2. Principais Fluxos Disponíveis
-
-Com base na análise da aplicação, os seguintes fluxos principais foram identificados.
-
-## Cadastro de Curso
-
-Permite ao usuário cadastrar um novo curso informando os seguintes dados:
-
-- **Nome do curso**
-- **Descrição**
-- **Instrutor**
-- **URL da imagem de capa**
-- **Data de início**
-- **Data de término**
-- **Número de vagas**
-- **Tipo de curso (presencial ou online)**
-
-Durante esse processo, o sistema deve realizar validação dos campos informados e garantir que as informações sejam armazenadas corretamente.
+Com base nesses critérios foram criados **23 casos de teste**, cobrindo cenários positivos e negativos da aplicação.
 
 ---
 
-## Listagem de Cursos
+##  Explicação do Raciocínio Durante a Análise
 
-Permite visualizar todos os cursos cadastrados na plataforma, exibindo as principais informações de cada curso.
+Durante o processo de análise o foco principal foi identificar possíveis situações onde o sistema poderia apresentar comportamentos inesperados.
 
-Esse fluxo é importante para garantir que os cursos cadastrados sejam corretamente exibidos e acessíveis aos usuários.
+A estratégia adotada foi simular diferentes tipos de interação do usuário, incluindo:
 
----
+- Inserção de dados inválidos
+- Tentativa de envio de formulários incompletos
+- Uso de valores fora do padrão esperado
+- Execução de funcionalidades principais da aplicação
 
-## Visualização de Detalhes do Curso
-
-Permite acessar as informações completas de um curso específico, apresentando os dados cadastrados anteriormente.
-
----
-
-# 3. Pontos Mais Críticos para Teste
-
-Algumas partes da aplicação são mais sensíveis e devem receber maior atenção durante a execução dos testes.
-
-## Validação de Campos no Cadastro de Curso
-
-É fundamental garantir que o sistema valide corretamente os campos obrigatórios, evitando o cadastro de cursos com dados inválidos ou incompletos.
-
-Exemplos de validações importantes incluem:
-
-- **Campos obrigatórios não preenchidos**
-- **Tamanho mínimo ou máximo de texto**
-- **Formato inválido de URL**
-- **Datas inconsistentes**
-- **Número de vagas inválido**
+Além disso, foi realizada a análise do **console do navegador**, permitindo identificar erros relacionados às requisições da API, como falhas ao tentar excluir um curso.
 
 ---
 
-## Persistência dos Dados
+# 📋 Análise das Funcionalidades do Sistema
 
-Após o cadastro de um curso, é importante verificar se:
+##  Qual é o objetivo da aplicação?
 
-- **O curso foi salvo corretamente**
-- **Ele aparece na listagem de cursos**
-- **As informações exibidas correspondem aos dados cadastrados**
+A aplicação tem como objetivo permitir que usuários possam **cadastrar, visualizar e gerenciar cursos**, armazenando informações relevantes sobre cada curso em um sistema web.
+
+Esse tipo de sistema facilita a organização de cursos e permite que os dados sejam gerenciados de forma centralizada.
 
 ---
 
-## Comportamento da Listagem de Cursos
+##  Quais são os principais fluxos disponíveis?
 
-A listagem deve:
+Durante a análise foram identificados os seguintes fluxos principais da aplicação:
 
-- **Exibir corretamente todos os cursos cadastrados**
-- **Atualizar após novos cadastros**
-- **Não apresentar duplicidades ou falhas de carregamento**
-- **Excluir curso**
+- Cadastro de novos cursos
+- Visualização da lista de cursos cadastrados
+- Visualização dos detalhes de um curso específico
+- Exclusão de cursos cadastrados
+
+Esses fluxos representam as principais interações que o usuário pode realizar dentro do sistema.
+
 ---
 
-## Cenários Negativos
+##  Quais pontos do sistema são mais críticos para teste?
 
-Também é importante validar comportamentos inesperados, como:
+Alguns pontos foram considerados mais críticos e exigem maior atenção durante os testes:
 
-- **Tentativa de cadastro com campos vazios**
-- **Inserção de dados muito longos**
-- **Envio de dados inválidos**
-- **Possíveis falhas durante o envio das informações**
+- **Validação de campos obrigatórios**
+- **Validação de tipos de dados**, como campos numéricos
+- **Tratamento de dados inválidos**
+- **Prevenção de cadastros duplicados**
+- **Funcionamento correto da exclusão de cursos**
+- **Tratamento de erros nas requisições da API**
+
+Esses pontos são críticos porque podem impactar diretamente a **integridade dos dados e o funcionamento da aplicação**.
+
+---
+##  Casos de Teste
+
+Os casos de teste criados para validar o sistema foram documentados em uma planilha do Google Sheets.
+
+A planilha contém:
+
+- ID do teste
+- Descrição do cenário
+- Passos para execução
+- Resultado esperado
+- Resultado obtido
+- Status do teste
+
+🔗 Acesse os casos de teste:
+
+[Planilha de Casos de Teste](https://docs.google.com/spreadsheets/d/1vOkG__h7XskD_OkKhCCapEOrhaL4BewvO6WfCftrt2k/edit?usp=sharing)
+
+---
+
+# Bugs Encontrados
+
+Durante a execução dos testes foram identificados os seguintes problemas:
+
+| ID | Bug | Severidade |
+|----|-----|------------|
+| BUG-01 | Cadastro de curso sem preencher campo obrigatório | Alta |
+| BUG-02 | Campo número de vagas aceita letras | Alta |
+| BUG-03 | Sistema aceita campos preenchidos apenas com espaços | Média |
+| BUG-04 | Sistema permite cadastro de cursos duplicados | Média |
+| BUG-05 | Sistema aceita URL inválida | Média |
+| BUG-06 | Erro ao excluir curso (405 Method Not Allowed) | Alta |
+
+## ⚠️ Erros de API Identificados
+
+Durante a execução dos testes foi identificado um erro na comunicação com a API ao tentar excluir um curso.
+
+Erro retornado:
+
+405 - Method Not Allowed
+
+Esse erro ocorre quando a aplicação tenta realizar uma requisição utilizando um método HTTP que não é permitido pela API.
+
+No caso analisado, o sistema tentou executar uma requisição do tipo DELETE para excluir um curso, porém o servidor não permite esse método nessa rota, impedindo a exclusão do curso.
+---
+
+#  Evidências dos Testes
+
+As evidências coletadas durante a execução dos testes estão disponíveis no Google Drive.
+
+📂 Pasta com evidências:
+
+🔗 **(https://drive.google.com/drive/folders/18ZaAU8HI3qYrWAjgIMAazCNMcapRWbu9?usp=drive_link)**
