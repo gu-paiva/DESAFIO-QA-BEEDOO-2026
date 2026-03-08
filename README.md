@@ -115,7 +115,7 @@ Durante a execução dos testes foram identificados os seguintes problemas:
 | BUG-04 | Sistema permite cadastro de cursos duplicados | Média |
 | BUG-05 | Sistema aceita URL inválida | Média |
 | BUG-06 | Erro ao excluir curso (405 Method Not Allowed) | Alta |
-| BUG-08 | Erro 404 (Not Found) identificado no console ao cadastrar curso e ao retornar para a listagem | Média |
+| BUG-08 | Erro 404 (Not Found) identificado no console ao cadastrar curso e ao retornar para a listagem | Alta |
 
 ## ⚠️ Erros de API Identificados
 
