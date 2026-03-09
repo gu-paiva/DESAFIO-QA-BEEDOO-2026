@@ -145,7 +145,7 @@ Durante a execução dos testes foram identificados os seguintes problemas:
 | ID | Bug | Severidade |
 |----|-----|------------|
 | BUG-01 | Cadastro de curso sem preencher campo obrigatório | Alta |
-| BUG-02 | Campo número de vagas aceita letras | Alta |
+| BUG-02 | Campo Número de vagas aceita valores inválidos | Alta |
 | BUG-03 | Sistema aceita campos preenchidos apenas com espaços | Média |
 | BUG-04 | Sistema permite cadastro de cursos duplicados | Média |
 | BUG-05 | Sistema aceita URL inválida | Média |
