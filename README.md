@@ -1,3 +1,11 @@
+# Desafio QA – Beedoo
+
+Este repositório contém a análise, planejamento e execução de testes realizados como parte do desafio técnico para a vaga de QA.
+
+O objetivo foi avaliar a qualidade de uma aplicação web de cadastro e gerenciamento de cursos, identificando possíveis falhas e documentando cenários de teste.
+
+---
+
 #  Análise da Aplicação
 
 ## Análise Inicial da Aplicação
