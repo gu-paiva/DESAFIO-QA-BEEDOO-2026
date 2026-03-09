@@ -5,6 +5,17 @@ Este repositório contém a análise, planejamento e execução de testes realiz
 O objetivo foi avaliar a qualidade de uma aplicação web de cadastro e gerenciamento de cursos, identificando possíveis falhas e documentando cenários de teste.
 
 ---
+## Sumário
+
+- [Análise da Aplicação](#análise-da-aplicação)
+- [Análise das Funcionalidades do Sistema](#análise-das-funcionalidades-do-sistema)
+- [Casos de Teste](#casos-de-teste)
+- [Bugs Encontrados](#bugs-encontrados)
+- [Erros de API Identificados](#erros-de-api-identificados)
+- [Evidências dos Testes](#evidências-dos-testes)
+- [Ferramentas Utilizadas](#ferramentas-utilizadas)
+
+---
 
 #  Análise da Aplicação
 
