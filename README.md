@@ -8,7 +8,7 @@ O objetivo foi avaliar a qualidade de uma aplicação web de cadastro e gerencia
 ## Sumário
 
 - [Análise da Aplicação](#análise-da-aplicação)
-- [Análise das Funcionalidades do Sistema](#análise-das-funcionalidades-do-sistema)
+- [Análise das Funcionalidades do Sistema](#-análise-das-funcionalidades-do-sistema)
 - [Casos de Teste](#casos-de-teste)
 - [Bugs Encontrados](#bugs-encontrados)
 - [Erros de API Identificados](#erros-de-api-identificados)
