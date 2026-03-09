@@ -28,7 +28,7 @@ Entre as decisões tomadas para planejar os testes estão:
 - Testar a funcionalidade de **exclusão de cursos**.
 - Monitorar possíveis **erros de comunicação com a API** através do console do navegador.
 
-Com base nesses critérios foram criados **23 casos de teste**, cobrindo cenários positivos e negativos da aplicação.
+Com base nesses critérios foram criados **24 casos de teste**, cobrindo cenários positivos e negativos da aplicação.
 
 ---
 
