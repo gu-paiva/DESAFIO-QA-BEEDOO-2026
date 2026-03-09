@@ -103,6 +103,22 @@ A planilha contém:
 
 ---
 
+## 🔒 Testes de Segurança (Extra)
+
+Durante a análise também foi realizado um teste adicional de segurança para verificar a possibilidade de vulnerabilidade **Cross-Site Scripting (XSS)** no campo **Nome do curso**.
+
+Nesse teste foi inserido um script no campo de entrada com o objetivo de verificar se o sistema executaria código JavaScript no navegador.
+
+Exemplo utilizado no teste:
+
+<script>alert('test')</script>
+
+O comportamento esperado é que o sistema trate o conteúdo inserido como **texto simples**, sem executar o script no navegador.
+
+Esse tipo de teste ajuda a identificar possíveis falhas de segurança relacionadas à validação de entradas do usuário.
+
+---
+
 # Bugs Encontrados
 
 Durante a execução dos testes foram identificados os seguintes problemas:
