@@ -152,6 +152,7 @@ Durante a execução dos testes foram identificados os seguintes problemas:
 | BUG-06 | Sistema permite cadastro de cursos duplicados | Média |
 | BUG-07 | Erro 404 (Not Found) identificado no console ao cadastrar curso e ao retornar para a listagem | Alta |
 
+Para mais detalhes, consulte a aba **BUG report** na planilha de testes.
 ## ⚠️ Erros de API Identificados
 
 Durante a execução dos testes foi identificado um erro na comunicação com a API ao tentar excluir um curso.
