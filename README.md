@@ -144,13 +144,13 @@ Durante a execução dos testes foram identificados os seguintes problemas:
 
 | ID | Bug | Severidade |
 |----|-----|------------|
-| BUG-01 | Cadastro de curso sem preencher campo obrigatório | Alta |
-| BUG-02 | Campo Número de vagas aceita valores inválidos | Alta |
-| BUG-03 | Sistema aceita campos preenchidos apenas com espaços | Média |
-| BUG-04 | Sistema permite cadastro de cursos duplicados | Média |
-| BUG-05 | Sistema aceita URL inválida | Média |
-| BUG-06 | Erro ao excluir curso (405 Method Not Allowed) | Alta |
-| BUG-08 | Erro 404 (Not Found) identificado no console ao cadastrar curso e ao retornar para a listagem | Alta |
+| BUG-01 | Sistema permite cadastrar curso com data futura | Média |
+| BUG-02 | Campo Número de vagas aceita valores inválidos | Média |
+| BUG-03 | Botão excluir curso não funciona | Alta |
+| BUG-04 | Não é possível visualizar detalhes do curso | Média |
+| BUG-05 | Cadastro de curso sem preencher campo obrigatório | Alta |
+| BUG-06 | Sistema permite cadastro de cursos duplicados | Média |
+| BUG-07 | Erro 404 (Not Found) identificado no console ao cadastrar curso e ao retornar para a listagem | Alta |
 
 ## ⚠️ Erros de API Identificados
 
