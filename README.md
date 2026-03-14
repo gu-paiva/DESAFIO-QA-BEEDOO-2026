@@ -93,14 +93,14 @@ Esses fluxos representam as principais interações que o usuário pode realizar
 
 Alguns pontos foram considerados mais críticos e exigem maior atenção durante os testes:
 
-- **Validação de campos obrigatórios**
-- **Validação de tipos de dados**, como campos numéricos
-- **Tratamento de dados inválidos**
-- **Prevenção de cadastros duplicados**
-- **Funcionamento correto da exclusão de cursos**
-- **Tratamento de erros nas requisições da API**
+- Validação de campos obrigatórios
+- Validação de tipos de dados, como campos numéricos
+- Tratamento de dados inválidos
+- Prevenção de cadastros duplicados
+- Funcionamento correto da exclusão de cursos
+- Tratamento de erros nas requisições da API
 
-Esses pontos são críticos porque podem impactar diretamente a **integridade dos dados e o funcionamento da aplicação**.
+Esses pontos são críticos porque podem impactar diretamente a integridade dos dados e o funcionamento da aplicação.
 
 ---
 ##  Casos de Teste
@@ -124,7 +124,7 @@ A planilha contém:
 
 ## 🔒 Testes de Segurança (Extra)
 
-Durante a análise também foi realizado um teste adicional de segurança para verificar a possibilidade de vulnerabilidade **Cross-Site Scripting (XSS)** no campo **Nome do curso**.
+Durante a análise também foi realizado um teste adicional de segurança para verificar a possibilidade de vulnerabilidade Cross-Site Scripting (XSS) no campo Nome do curso.
 
 Nesse teste foi inserido um script no campo de entrada com o objetivo de verificar se o sistema executaria código JavaScript no navegador.
 
@@ -132,7 +132,7 @@ Exemplo utilizado no teste:
 
 <script>alert('test')</script>
 
-O comportamento esperado é que o sistema trate o conteúdo inserido como **texto simples**, sem executar o script no navegador.
+O comportamento esperado é que o sistema trate o conteúdo inserido como texto simples, sem executar o script no navegador.
 
 Esse tipo de teste ajuda a identificar possíveis falhas de segurança relacionadas à validação de entradas do usuário.
 
