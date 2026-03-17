@@ -19,33 +19,44 @@ O objetivo foi avaliar a qualidade de uma aplicação web de cadastro e gerencia
 
 #  Análise da Aplicação
 
-## Análise Inicial da Aplicação
+Ao explorar a aplicação, identifiquei que o módulo de cursos possui como principais objetivos permitir o cadastro, exibição, consulta e gerenciamento dos cursos cadastrados.
 
-A aplicação analisada consiste em um sistema web para **cadastro e gerenciamento de cursos**.  
-Por meio da interface, o usuário pode inserir informações sobre cursos e gerenciar esses registros.
+Durante a análise inicial, considerei os seguintes pontos como mais críticos para validação:
 
-Durante a análise inicial foi possível identificar que a aplicação possui um **formulário de cadastro** com diferentes campos.
+- Funcionamento do fluxo principal de cadastro de curso;
+- Integridade das informações exibidas na listagem;
+- Validação de campos obrigatórios;
+- Tratamento de entradas inválidas;
+- Comportamento da aplicação diante de ações inesperadas do usuário;
+- Estabilidade da navegação entre telas.
 
-Também foi possível observar que o sistema realiza requisições para uma API para armazenar e manipular os dados cadastrados.
+Também observei que, por se tratar de um módulo de cadastro, qualquer falha pode impactar diretamente a experiência do usuário e a confiabilidade dos dados exibidos no sistema.
 
-Com base nessa análise inicial, foram identificados alguns pontos que poderiam apresentar falhas.
 
 ---
 
 ##  Decisões Tomadas para Criação dos Testes
 
-Para a criação dos testes foi adotada uma abordagem focada nos principais fluxos da aplicação e nos possíveis cenários de erro que podem ocorrer durante o uso do sistema.
+Para a criação dos testes, organizei a cobertura com foco em cenários que representassem tanto o uso esperado da aplicação quanto situações de erro e comportamento inesperado.
 
-Entre as decisões tomadas para planejar os testes estão:
+### 1. Priorizar o fluxo principal
+O primeiro foco foi validar se o cadastro de curso funcionava corretamente com dados válidos, pois esse é o fluxo central da funcionalidade.
 
-- Verificar a **validação de campos obrigatórios**, garantindo que o sistema não permita cadastros incompletos.
-- Testar **entradas inválidas**, como inserção de letras em campos numéricos.
-- Avaliar o comportamento do sistema ao inserir **textos muito longos**, verificando possíveis problemas de layout ou ausência de limite de caracteres.
-- Testar **campos preenchidos apenas com espaços**, verificando se o sistema trata corretamente esse tipo de entrada.
-- Avaliar se o sistema permite **cadastro de cursos duplicados**.
-- Verificar se o sistema realiza **validação adequada de URLs**.
-- Testar a funcionalidade de **exclusão de cursos**.
-- Monitorar possíveis **erros de comunicação com a API** através do console do navegador.
+### 2. Cobrir validações de campos
+Como telas de cadastro costumam concentrar muitos erros, testei:
+- Campos obrigatórios;
+- Formatos inválidos;
+- Valores inconsistentes;
+- Tentativas de envio com dados incorretos.
+
+### 3. Testar cenários negativos
+Incluí cenários negativos para verificar como o sistema se comporta diante de entradas inválidas, ações incompletas ou situações não previstas.
+
+### 4. Validar a listagem de cursos
+Verifiquei se os cursos cadastrados aparecem corretamente na listagem e se as informações permanecem consistentes após as ações realizadas.
+
+### 5. Registrar bugs com severidade
+Documentei os defeitos encontrados com identificação e severidade, facilitando a comunicação e destacando a criticidade de cada problema.
 
 Com base nesses critérios foram criados **24 casos de teste**, cobrindo cenários positivos e negativos da aplicação.
 
@@ -53,14 +64,20 @@ Com base nesses critérios foram criados **24 casos de teste**, cobrindo cenári
 
 ##  Explicação do Raciocínio Durante a Análise
 
-Durante o processo de análise o foco principal foi identificar possíveis situações onde o sistema poderia apresentar comportamentos inesperados.
+Meu raciocínio foi baseado em analisar a aplicação sob a perspectiva do usuário, considerando também os riscos mais relevantes para o negócio e para a qualidade do sistema.
 
-A estratégia adotada foi simular diferentes tipos de interação do usuário, incluindo:
+Comecei pelo fluxo principal: **cadastrar um curso com sucesso**.
 
-- Inserção de dados inválidos
-- Tentativa de envio de formulários incompletos
-- Uso de valores fora do padrão esperado
-- Execução de funcionalidades principais da aplicação
+A partir disso, avaliei possíveis falhas com perguntas como:
+
+- O que acontece se o usuário deixar campos obrigatórios em branco?
+- O sistema impede valores inválidos?
+- É possível cadastrar informações duplicadas?
+- A aplicação mantém consistência após salvar?
+- Existe alguma falha visível, como erro de página ou quebra de fluxo?
+
+Esse processo me ajudou a construir testes não apenas para validar o funcionamento esperado, mas também para identificar falhas que poderiam passar despercebidas.
+
 
 Além disso, foi realizada a análise do **console do navegador**, permitindo identificar erros relacionados às requisições da API, como falhas ao tentar excluir um curso.
 
