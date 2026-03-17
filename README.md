@@ -43,7 +43,7 @@ Com base nessa análise, foi definida uma estratégia de testes focada nos fluxo
 
 ## Decisões Tomadas para Criação dos Testes
 
-AA estratégia de testes foi construída com base na priorização de riscos e impacto para o usuário.
+A estratégia de testes foi construída com base na priorização de riscos e impacto para o usuário.
 
 As principais decisões foram:
 
