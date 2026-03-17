@@ -138,7 +138,7 @@ A planilha contém:
 
 ---
 
-## 🔒 Testes de Segurança (Extra)
+## 🔒 Testes de Segurança
 
 Durante a análise também foi realizado um teste adicional de segurança para verificar a possibilidade de vulnerabilidade Cross-Site Scripting (XSS) no campo Nome do curso.
 
