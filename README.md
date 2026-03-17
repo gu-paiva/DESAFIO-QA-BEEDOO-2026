@@ -21,13 +21,11 @@ O objetivo foi avaliar a qualidade de uma aplicação web de cadastro e gerencia
 
 A análise inicial teve como objetivo compreender o funcionamento geral do módulo de cursos, identificando suas principais funcionalidades e o fluxo de utilização pelo usuário.
 
-Foi observado que a aplicação permite realizar o cadastro de cursos, visualizar a listagem, acessar detalhes e executar ações como exclusão. Esses fluxos foram considerados essenciais, pois representam o uso principal do sistema.
+Foi observado que a aplicação permite realizar o cadastro de cursos, visualizar a listagem, acessar detalhes e executar ações como exclusão, esses fluxos foram considerados essenciais, pois representam o uso principal do sistema.
 
-Durante essa etapa, também foram identificados os principais campos envolvidos no cadastro, como nome do curso, URL da imagem, descrição do curso, tipo de curso, data e número de vagas. A partir disso, foi possível avaliar a necessidade de validações para garantir a consistência dos dados inseridos.
+Durante essa etapa, também foram identificados os principais campos envolvidos no cadastro, como nome do curso, URL da imagem, descrição do curso, tipo de curso, data e número de vagas. 
 
-Tambem a navegação entre as páginas foi analisada, verificando como o sistema se comporta após cada ação do usuário, como redirecionamentos, atualizações da lista e exibição de informações.
-
-Outro ponto considerado foi a identificação de possíveis riscos, como falhas de validação, comportamento inesperado do sistema e erros de navegação (ex: páginas não encontradas).
+Foi analisado a navegação entre as páginas, verificando como o sistema se comporta após cada ação do usuário, como redirecionamentos, atualizações da lista e exibição de informações.
 
 Com base nessa análise inicial, foi possível definir uma estratégia de testes focada nos fluxos críticos, validações de dados e cenários negativos, garantindo uma cobertura mais eficiente e alinhada com os principais riscos da aplicação.
 
@@ -35,7 +33,6 @@ Com base nessa análise inicial, foi possível definir uma estratégia de testes
 
 ##  Decisões Tomadas para Criação dos Testes
 
-## 📌 Decisões Tomadas para a Criação dos Testes
 
 Durante a elaboração dos testes, algumas decisões foram tomadas com o objetivo de garantir uma cobertura eficiente, focada nos principais riscos e comportamentos da aplicação.
 
@@ -49,7 +46,7 @@ Outra decisão importante foi validar a **listagem de cursos**, garantindo que o
 
 Durante os testes, também foi considerado o impacto de possíveis falhas, priorizando a identificação de **bugs críticos**, como erros que impedem o uso da aplicação (ex: erro 404 ou falhas em funcionalidades principais).
 
-Então foi adotei uma abordagem prática e objetiva na escrita dos testes, utilizando estrutura clara e organizada, facilitando o entendimento e manutenção dos cenários.
+Então adotei uma abordagem prática e objetiva na escrita dos testes, utilizando estrutura clara e organizada, facilitando o entendimento e manutenção dos cenários.
 
 Com base nesses critérios foram criados **24 casos de teste**, cobrindo cenários positivos e negativos da aplicação.
 
@@ -68,7 +65,7 @@ Minha nálise buscou observar tanto o comportamento visível na interface quanto
 De forma geral, o raciocínio durante a análise foi baseado em três pontos principais: compreender o objetivo da funcionalidade, identificar os riscos mais relevantes e transformar essa leitura em cenários de teste claros e objetivos.
 
 
-Além disso, foi realizada a análise do **console do navegador**, permitindo identificar erros relacionados às requisições da API, como falhas ao tentar excluir um curso.
+Foi realizada a análise do console do navegador, permitindo identificar falhas nas requisições da API, como erros ao executar a exclusão de um curso.
 
 ---
 
