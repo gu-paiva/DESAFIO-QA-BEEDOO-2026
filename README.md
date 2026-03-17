@@ -19,18 +19,17 @@ O objetivo foi avaliar a qualidade de uma aplicação web de cadastro e gerencia
 
 #  Análise da Aplicação
 
-Ao explorar a aplicação, identifiquei que o módulo de cursos possui como principais objetivos permitir o cadastro, exibição, consulta e gerenciamento dos cursos cadastrados.
+A análise inicial teve como objetivo compreender o funcionamento geral do módulo de cursos, identificando suas principais funcionalidades e o fluxo de utilização pelo usuário.
 
-Na análise inicial, considerei os seguintes pontos como mais críticos para validação:
+Foi observado que a aplicação permite realizar o cadastro de cursos, visualizar a listagem, acessar detalhes e executar ações como exclusão. Esses fluxos foram considerados essenciais, pois representam o uso principal do sistema.
 
-- Funcionamento do fluxo principal de cadastro de curso;
-- Integridade das informações exibidas na listagem;
-- Validação de campos obrigatórios;
-- Entradas inválidas;
-- Comportamento da aplicação diante de ações inesperadas do usuário;
-- Estabilidade da navegação entre telas.
+Durante essa etapa, também foram identificados os principais campos envolvidos no cadastro, como nome do curso, URL da imagem, descrição do curso, tipo de curso, data e número de vagas. A partir disso, foi possível avaliar a necessidade de validações para garantir a consistência dos dados inseridos.
 
-Também observei que por se tratar de um módulo de cadastro qualquer falha pode impactar a experiência do usuário.
+Tambem a navegação entre as páginas foi analisada, verificando como o sistema se comporta após cada ação do usuário, como redirecionamentos, atualizações da lista e exibição de informações.
+
+Outro ponto considerado foi a identificação de possíveis riscos, como falhas de validação, comportamento inesperado do sistema e erros de navegação (ex: páginas não encontradas).
+
+Com base nessa análise inicial, foi possível definir uma estratégia de testes focada nos fluxos críticos, validações de dados e cenários negativos, garantindo uma cobertura mais eficiente e alinhada com os principais riscos da aplicação.
 
 ---
 
@@ -40,11 +39,11 @@ Também observei que por se tratar de um módulo de cadastro qualquer falha pode
 
 Durante a elaboração dos testes, algumas decisões foram tomadas com o objetivo de garantir uma cobertura eficiente, focada nos principais riscos e comportamentos da aplicação.
 
-Inicialmente, priorizei o **fluxo principal de cadastro de cursos**, por ser a funcionalidade central do sistema garantir que o usuário consiga criar cursos corretamente é essencial para o funcionamento da aplicação.
+Primeiro priorizei o **fluxo principal de cadastro de cursos**, por ser a funcionalidade central do sistema garantir que o usuário consiga criar cursos corretamente é essencial para o funcionamento da aplicação.
 
-Também fiz às **validações de campos**, incluindo cenários com dados inválidos, campos obrigatórios não preenchidos e entradas fora do padrão esperado, isso ajuda a identificar falhas de validação que podem comprometer a integridade dos dados.
+Testei às **validações de campos**, incluindo cenários com dados inválidos, campos obrigatórios não preenchidos e entradas fora do padrão esperado, isso ajuda a identificar falhas de validação que podem comprometer a integridade dos dados.
 
-Além disso, foram incluídos **cenários negativos**, simulando comportamentos inesperados do usuário, como tentativas de cadastro com informações incorretas ou incompletas.
+Foram incluídos **cenários negativos**, simulando comportamentos inesperados do usuário, como tentativas de cadastro com informações incorretas ou incompletas.
 
 Outra decisão importante foi validar a **listagem de cursos**, garantindo que os dados cadastrados sejam exibidos corretamente e que ações como visualização e exclusão funcionem conforme o esperado.
 
@@ -58,19 +57,15 @@ Com base nesses critérios foram criados **24 casos de teste**, cobrindo cenári
 
 ##  Explicação do Raciocínio Durante a Análise
 
-Meu raciocínio foi baseado em analisar a aplicação sob a perspectiva do usuário, considerando também os riscos mais relevantes para o negócio e para a qualidade do sistema.
+Durante a análise da aplicação, o foco inicial foi compreender o comportamento principal do módulo de cursos e identificar quais funcionalidades eram mais relevantes para o usuário final. Então minha análise foi direcionada para os fluxos com maior impacto no uso do sistema, como cadastro, listagem, visualização e exclusão de cursos.
 
-Comecei pelo fluxo principal: **cadastrar um curso com sucesso**.
+Meu raciocinio partiu da ideia de validar primeiro o funcionamento esperado da aplicação em seguida explorar situações de erro, entradas inválidas e comportamentos inesperados. Isso permitiu avaliar não apenas se o sistema funciona em condições ideais, mas também como ele se comporta diante de cenários negativos.
 
-A partir disso, avaliei possíveis falhas com perguntas como:
+Também foi considerado o risco de cada funcionalidade durante a análise. Fluxos principais e ações críticas receberam maior atenção, pois qualquer falha nesses pontos compromete diretamente a experiência do usuário e a confiabilidade do sistema.
 
-- O que acontece se o usuário deixar campos obrigatórios em branco?
-- O sistema impede valores inválidos?
-- É possível cadastrar informações duplicadas?
-- A aplicação mantém consistência após salvar?
-- Existe alguma falha visível, como erro de página ou quebra de fluxo?
+Minha nálise buscou observar tanto o comportamento visível na interface quanto possíveis indícios de falhas técnicas, como mensagens de erro, inconsistências na navegação e comportamentos diferentes do esperado após determinadas ações.
 
-Esse processo me ajudou a construir testes não apenas para validar o funcionamento esperado, mas também para identificar falhas que poderiam passar despercebidas.
+De forma geral, o raciocínio durante a análise foi baseado em três pontos principais: compreender o objetivo da funcionalidade, identificar os riscos mais relevantes e transformar essa leitura em cenários de teste claros e objetivos.
 
 
 Além disso, foi realizada a análise do **console do navegador**, permitindo identificar erros relacionados às requisições da API, como falhas ao tentar excluir um curso.
