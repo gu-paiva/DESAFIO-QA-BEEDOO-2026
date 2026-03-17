@@ -60,7 +60,7 @@ Meu raciocinio partiu da ideia de validar primeiro o funcionamento esperado da a
 
 Também foi considerado o risco de cada funcionalidade durante a análise. Fluxos principais e ações críticas receberam maior atenção, pois qualquer falha nesses pontos compromete diretamente a experiência do usuário e a confiabilidade do sistema.
 
-Minha nálise buscou observar tanto o comportamento visível na interface quanto possíveis indícios de falhas técnicas, como mensagens de erro, inconsistências na navegação e comportamentos diferentes do esperado após determinadas ações.
+Minha análise buscou observar tanto o comportamento visível na interface quanto possíveis indícios de falhas técnicas, como mensagens de erro, inconsistências na navegação e comportamentos diferentes do esperado após determinadas ações.
 
 De forma geral, o raciocínio durante a análise foi baseado em três pontos principais: compreender o objetivo da funcionalidade, identificar os riscos mais relevantes e transformar essa leitura em cenários de teste claros e objetivos.
 
