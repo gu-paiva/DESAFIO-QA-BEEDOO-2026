@@ -17,7 +17,7 @@ O objetivo foi avaliar a qualidade de uma aplicação web de cadastro e gerencia
 
 ---
 
-#  Análise da Aplicação
+##  Análise da Aplicação
 
 A análise inicial teve como objetivo compreender o funcionamento geral do módulo de cursos, identificando suas principais funcionalidades e o fluxo de utilização pelo usuário.
 
@@ -141,7 +141,7 @@ Esse tipo de teste ajuda a identificar possíveis falhas de segurança relaciona
 
 ---
 
-# Bugs Encontrados
+## Bugs Encontrados
 
 Durante a execução dos testes foram identificados os seguintes problemas:
 
@@ -156,6 +156,7 @@ Durante a execução dos testes foram identificados os seguintes problemas:
 | BUG-07 | Erro 404 (Not Found) identificado no console ao cadastrar curso e ao retornar para a listagem | Alta |
 
 Para mais detalhes, consulte a aba **BUG report** na planilha de testes.
+
 ## ⚠️ Erros de API Identificados
 
 Durante a execução dos testes foi identificado um erro na comunicação com a API ao tentar excluir um curso.
@@ -169,7 +170,7 @@ Esse erro ocorre quando a aplicação tenta realizar uma requisição utilizando
 No caso analisado, o sistema tentou executar uma requisição do tipo DELETE para excluir um curso, porém o servidor não permite esse método nessa rota, impedindo a exclusão do curso.
 ---
 
-#  Evidências dos Testes
+##  Evidências dos Testes
 
 As evidências coletadas durante a execução dos testes estão disponíveis no Google Drive.
 
