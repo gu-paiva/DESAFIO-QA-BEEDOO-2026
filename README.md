@@ -21,23 +21,22 @@ O objetivo foi avaliar a qualidade de uma aplicação web de cadastro e gerencia
 
 Ao explorar a aplicação, identifiquei que o módulo de cursos possui como principais objetivos permitir o cadastro, exibição, consulta e gerenciamento dos cursos cadastrados.
 
-Durante a análise inicial, considerei os seguintes pontos como mais críticos para validação:
+Na análise inicial, considerei os seguintes pontos como mais críticos para validação:
 
 - Funcionamento do fluxo principal de cadastro de curso;
 - Integridade das informações exibidas na listagem;
 - Validação de campos obrigatórios;
-- Tratamento de entradas inválidas;
+- Entradas inválidas;
 - Comportamento da aplicação diante de ações inesperadas do usuário;
 - Estabilidade da navegação entre telas.
 
-Também observei que, por se tratar de um módulo de cadastro, qualquer falha pode impactar diretamente a experiência do usuário e a confiabilidade dos dados exibidos no sistema.
-
+Também observei que por se tratar de um módulo de cadastro qualquer falha pode impactar a experiência do usuário.
 
 ---
 
 ##  Decisões Tomadas para Criação dos Testes
 
-Para a criação dos testes, organizei a cobertura com foco em cenários que representassem tanto o uso esperado da aplicação quanto situações de erro e comportamento inesperado.
+Para a criação dos testes organizei a cobertura com foco em cenários que representassem tanto o uso esperado da aplicação quanto situações de erro e comportamento inesperado.
 
 ### 1. Priorizar o fluxo principal
 O primeiro foco foi validar se o cadastro de curso funcionava corretamente com dados válidos, pois esse é o fluxo central da funcionalidade.
