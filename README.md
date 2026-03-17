@@ -36,26 +36,21 @@ Também observei que por se tratar de um módulo de cadastro qualquer falha pode
 
 ##  Decisões Tomadas para Criação dos Testes
 
-Para a criação dos testes organizei a cobertura com foco em cenários que representassem tanto o uso esperado da aplicação quanto situações de erro e comportamento inesperado.
+## 📌 Decisões Tomadas para a Criação dos Testes
 
-### 1. Priorizar o fluxo principal
-O primeiro foco foi validar se o cadastro de curso funcionava corretamente com dados válidos, pois esse é o fluxo central da funcionalidade.
+Durante a elaboração dos testes, algumas decisões foram tomadas com o objetivo de garantir uma cobertura eficiente, focada nos principais riscos e comportamentos da aplicação.
 
-### 2. Cobrir validações de campos
-Como telas de cadastro costumam concentrar muitos erros, testei:
-- Campos obrigatórios;
-- Formatos inválidos;
-- Valores inconsistentes;
-- Tentativas de envio com dados incorretos.
+Inicialmente, priorizei o **fluxo principal de cadastro de cursos**, por ser a funcionalidade central do sistema garantir que o usuário consiga criar cursos corretamente é essencial para o funcionamento da aplicação.
 
-### 3. Testar cenários negativos
-Incluí cenários negativos para verificar como o sistema se comporta diante de entradas inválidas, ações incompletas ou situações não previstas.
+Também fiz às **validações de campos**, incluindo cenários com dados inválidos, campos obrigatórios não preenchidos e entradas fora do padrão esperado, isso ajuda a identificar falhas de validação que podem comprometer a integridade dos dados.
 
-### 4. Validar a listagem de cursos
-Verifiquei se os cursos cadastrados aparecem corretamente na listagem e se as informações permanecem consistentes após as ações realizadas.
+Além disso, foram incluídos **cenários negativos**, simulando comportamentos inesperados do usuário, como tentativas de cadastro com informações incorretas ou incompletas.
 
-### 5. Registrar bugs com severidade
-Documentei os defeitos encontrados com identificação e severidade, facilitando a comunicação e destacando a criticidade de cada problema.
+Outra decisão importante foi validar a **listagem de cursos**, garantindo que os dados cadastrados sejam exibidos corretamente e que ações como visualização e exclusão funcionem conforme o esperado.
+
+Durante os testes, também foi considerado o impacto de possíveis falhas, priorizando a identificação de **bugs críticos**, como erros que impedem o uso da aplicação (ex: erro 404 ou falhas em funcionalidades principais).
+
+Então foi adotei uma abordagem prática e objetiva na escrita dos testes, utilizando estrutura clara e organizada, facilitando o entendimento e manutenção dos cenários.
 
 Com base nesses critérios foram criados **24 casos de teste**, cobrindo cenários positivos e negativos da aplicação.
 
